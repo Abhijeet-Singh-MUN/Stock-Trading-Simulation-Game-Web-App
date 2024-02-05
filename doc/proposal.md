@@ -38,7 +38,7 @@ Bottom Right: tracking of popular stocks being bought currently.
 
 Navigation Bar(top center wide) : quick access to search stocks, notifications, myProfile, buy/sell, chats etc.
 
-![](C:\Drive D\MUN\winter 2024\CS3100\project\project design template docs\Home page 01.jpeg)
+![Home page 01](C:\Drive D\MUN\winter 2024\CS3100\project\project design template docs\Home page 01.jpeg)
 
 1. My Profile: tracking personal progress on courses, hours dedicated, friend requests and recommendations, virtual awards/achievements like on steam.
 
