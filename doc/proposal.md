@@ -18,15 +18,15 @@ A simplistic example of user interface is shown below, this proposed design does
 
 1. The login page
 
-![](Home page 01.jpeg)
+![](Home%20page%2001.jpeg)
 
-1. Notifications Page
+2. Notifications Page
 
 A general menu sidebar(left) allows to travel seamlessly between different pages.
 
-![](RackMultipart20240205-1-c415sq_html_c53e4d15e4e7aa07.jpg)A right sidebar for notifications page to filter notifications, and updates for prioritising workflow.
+![](Log%20in.jpeg)A right sidebar for notifications page to filter notifications, and updates for prioritising workflow.
 
-1. Main page for workflow.
+3. Main page for workflow.
 
 Top Includes possible client management option to finance on behalf of other players to simulate the role of a financial stock portfolio manager, additional sidebar(right) to view feedback from the clients. If no clients, then shows personal earnings and portfolio growth.
 
@@ -38,15 +38,15 @@ Bottom Right tracking of popular stocks being bought currently.
 
 Navigation Bar(top center wide)  quick access to search stocks, notifications, myProfile, buysell, chats etc.
 
-![](RackMultipart20240205-1-c415sq_html_f24c9fa050850396.jpg)
+![](Notifications%2001.jpeg)
 
-1. My Profile tracking personal progress on courses, hours dedicated, friend requests and recommendations, virtual awardsachievements like on steam.
+4. My Profile tracking personal progress on courses, hours dedicated, friend requests and recommendations, virtual awardsachievements like on steam.
 
-![](RackMultipart20240205-1-c415sq_html_80a54c535d2b892e.jpg)
+![](Profile.jpeg)
 
-1. Portfolio Page Tracking transactions, stocks owned, sold, current inventory and its current value, overall change in value etc.
+5. Portfolio Page Tracking transactions, stocks owned, sold, current inventory and its current value, overall change in value etc.
 
-![](RackMultipart20240205-1-c415sq_html_bfe95e28c2cfeaa7.jpg)
+![](Statements%2001.jpeg)
 
 Planned Features
 
@@ -241,3 +241,5 @@ Attributions
 - ChatGPT for general help and help with APP API section
 - Sumesh(friend currently dealing with stock market)
 - Google Search
+
+[def]: Hom
