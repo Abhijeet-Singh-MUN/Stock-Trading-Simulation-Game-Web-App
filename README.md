@@ -17,11 +17,12 @@ This project is a web application for simulating a stock trading game. Players c
 
 ## Folder Structure
 
+- **the models, controllers, routes and tests are under the server directory**
 - **config.mjs:** Contains configuration variables such as MongoDB URI and API keys.
 - **models/:** Contains Mongoose models for Player, Game, and Trade.
 - **controllers/:** Contains controller functions for handling various routes.
 - **routes/:** Contains route definitions for different endpoints.
-- **test/:** Contains test files for testing routes and controllers using Mocha, Chai, and Supertest.
+- **tests/:** Contains test files for testing routes and controllers using Mocha, Chai, and Supertest.
 - **app.mjs:** Entry point for the Express application.
 - **README.md:** Documentation file explaining the project structure, functionality, and how to set up and run the project.
 
