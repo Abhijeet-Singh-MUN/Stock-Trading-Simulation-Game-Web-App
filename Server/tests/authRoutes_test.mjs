@@ -1,4 +1,4 @@
-// authRoutes.test.js
+
 
 import { app, request, mockUserData } from './test.js'; // Importing Express app, supertest request, and mock data
 import { expect } from 'chai'; // Importing Chai for assertions

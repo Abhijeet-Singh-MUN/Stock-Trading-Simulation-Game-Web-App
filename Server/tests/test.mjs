@@ -1,4 +1,4 @@
-// test.js
+// test.mjs
 
 import app from '../app.mjs';
 import request from 'supertest';

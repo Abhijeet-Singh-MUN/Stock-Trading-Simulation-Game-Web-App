@@ -1,4 +1,4 @@
-// gameRoutes.test.js
+
 
 import { app, request, mockGameData } from './test.js'; // Importing Express app, supertest request, and mock data
 import { expect } from 'chai'; // Importing Chai for assertions
