@@ -6,23 +6,25 @@ import sinon from 'sinon';
 import { scheduleDeclareWinner } from '../controllers/gameController';
 
 describe('Game Controller', () => {
-  it('should schedule declare winner after 48 hours', async () => {
+  it('should schedule declare winner after specified duration', async () => {
     const declareWinnerStub = sinon.stub();
     const clock = sinon.useFakeTimers();
 
-    await scheduleDeclareWinner('gameId123'); // Replace 'gameId123' with an actual game ID
+    // Set duration hours (e.g., 48 hours)
+    const durationHours = 48;
 
-    // Fast-forward time by 48 hours
-    clock.tick(48 * 60 * 60 * 1000);
+    await scheduleDeclareWinner('gameId123', durationHours); // Replace 'gameId123' with an actual game ID
 
-    // Check if declareWinnerStub was called after 48 hours
+    // Fast-forward time by duration hours
+    clock.tick(durationHours * 3600 * 1000);
+
+    // Check if declareWinnerStub was called after specified duration
     expect(declareWinnerStub.calledOnce).to.be.true;
 
     // Restore the original timers
     clock.restore();
   });
 });
-
 
 describe('POST /api/auth/create', () => {
   it('should create a new player', async () => {
