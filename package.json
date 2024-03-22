@@ -5,6 +5,7 @@
     "express": "^5.0.0-beta.2",
     "mocha": "^10.3.0",
     "mongoose": "^8.2.2",
+    "node-cron": "^3.0.3",
     "supertest": "^6.3.4"
   }
 }
