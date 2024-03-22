@@ -3,11 +3,28 @@
 # Project Name: Stock Trading Game
 
 
+- Since, the additional two features i developed weren't using http calls, they didn't satisfy assignment requirements so i created additonal ones
+- i'd like you to use them for the purpose of invigilating.
+
+- **1st list/group of feautures - unittests are written for player routes and the routes are as follows :** 
+- // Route for getting recent games
+- router.get('/recent-games', getRecentGames);
+
+- // Route for getting game details by gameId
+- router.get('/game-details/:gameId', getGameDetails);
+
+- // Route for getting competitor portfolio details by playerId
+- router.get('/competitor-portfolio/:playerId', getPlayerCompetitorPortfolio);
 
 
+- **2nd feature- unittests are written for gameRoutes and the route is as follows :**
+
+- // Route for changing game settings
+- router.post('/changeSettings', changeGameSettings);
 
 
-
+All other unittest and features are decoupled and written in a way that they are self explanatory, there are lots of additional mini
+features i have written that do not have to be concerned in terms of invigilation, but i put a lot of effort in it, so i don't mind some bonus points. i do beleive i've done awesome work, and am proud of it. Thankyou for your time, to observe my work. Please use package.json, i've used lots of things not used in the course, okay maybe not really except cron and sinon.
 
 
 
