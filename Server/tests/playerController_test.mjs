@@ -2,6 +2,27 @@
 import { app, request } from './test.js'; // Import Express app and supertest request
 import { expect } from 'chai'; // Import Chai for assertions
 import Player from '../models/Player.mjs'; // Import Player model
+import sinon from 'sinon';
+import { scheduleDeclareWinner } from '../controllers/gameController';
+
+describe('Game Controller', () => {
+  it('should schedule declare winner after 48 hours', async () => {
+    const declareWinnerStub = sinon.stub();
+    const clock = sinon.useFakeTimers();
+
+    await scheduleDeclareWinner('gameId123'); // Replace 'gameId123' with an actual game ID
+
+    // Fast-forward time by 48 hours
+    clock.tick(48 * 60 * 60 * 1000);
+
+    // Check if declareWinnerStub was called after 48 hours
+    expect(declareWinnerStub.calledOnce).to.be.true;
+
+    // Restore the original timers
+    clock.restore();
+  });
+});
+
 
 describe('POST /api/auth/create', () => {
   it('should create a new player', async () => {
