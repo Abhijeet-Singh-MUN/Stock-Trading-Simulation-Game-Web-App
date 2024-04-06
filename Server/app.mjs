@@ -14,6 +14,18 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+process.on('SIGINT', () => {
+  console.log('Received SIGINT. Shutting down gracefully...');
+  // Perform cleanup tasks here
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('Received SIGTERM. Shutting down gracefully...');
+  // Perform cleanup tasks here
+  process.exit(0);
+});
+
 const app = express();
 const httpServer = http.createServer(app);
 
@@ -34,16 +46,21 @@ webSocketServer.on('connection', function connection(ws) {
   });
 });
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3008;
 
 httpServer.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
+webSocketServer.on('listening', () => console.log(`WebSocket Server running on port ${PORT}`));
 mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
 app.use(express.static(path.join(__dirname, 'Client')));
 app.use(express.json());
+
+// Serve the index.html file when accessing '/'
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..',  'Client', 'html', 'index.html'));
+});
 
 app.use('/api/auth', register, login);
 app.use('/api/game', gameRoutes);
