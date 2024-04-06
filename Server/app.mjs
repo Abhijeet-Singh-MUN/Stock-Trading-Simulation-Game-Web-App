@@ -7,13 +7,18 @@ import gameRoutes from './routes/gameRoutes.mjs';
 import playerRoutes from './routes/playerRoutes.mjs';
 import tradeRoutes from './routes/tradeRoutes.mjs';
 import http from 'http';
-import WebSocket from 'ws';
+import {WebSocketServer} from 'ws';
+import { fileURLToPath } from 'url';
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const httpServer = http.createServer(app);
 
 // Create WebSocket server
-const webSocketServer = new WebSocket.Server({ server: httpServer });
+const webSocketServer = new WebSocketServer({ server: httpServer });
 
 // WebSocket connection handling
 webSocketServer.on('connection', function connection(ws) {
@@ -29,7 +34,7 @@ webSocketServer.on('connection', function connection(ws) {
   });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3002;
 
 httpServer.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
@@ -37,7 +42,7 @@ mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: t
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Client')));
 app.use(express.json());
 
 app.use('/api/auth', register, login);
