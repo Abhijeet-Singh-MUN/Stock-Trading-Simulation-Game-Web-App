@@ -31,7 +31,10 @@ const GameReferenceSchema = new mongoose.Schema({
     // For simplicity, i'll just include the cash balance for now
     type: Number,
     required: true,
-    currentAmount : await Player.PlayerSchema.select('currentAmount').exec() // Fetch the currentAmount of the player
+    currentAmount: {
+      type: Number,
+      required: true
+    }
   }
 });
 
