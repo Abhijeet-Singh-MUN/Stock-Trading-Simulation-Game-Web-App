@@ -1,0 +1,23 @@
+<!-- join_game.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Join an Existing Game</h1>
+    <form id="join-game-form">
+        <label for="game-id">Game ID:</label>
+        <input type="text" id="game-id" name="game-id" required>
+        <label for="player-name">Your Name:</label>
+        <input type="text" id="player-name" name="player-name" required>
+        <button type="submit">Join Game</button>
+    </form>
+    <div id="join-game-message"></div>
+
+    <script type="module" src="join_game.js"></script>
+</body>
+</html>

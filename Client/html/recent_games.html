@@ -1,0 +1,52 @@
+<!-- recent_games.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Games</title>
+</head>
+<body>
+    <h1>Recent Games</h1>
+
+    <!-- Button to fetch recent games -->
+    <button onclick="getRecentGames()">Get Recent Games</button>
+
+    <!-- Container to display recent games -->
+    <div id="recent-games-container"></div>
+
+    <!-- Include websocket.js -->
+    <script src="/js/websocket.js"></script>
+
+    <!-- Script to handle WebSocket functionality -->
+    <script>
+        // Function to fetch recent games
+        function getRecentGames() {
+            sendMessage('getRecentGames');
+        }
+
+        // Function to handle received message from server
+        function handleReceivedMessage(message) {
+            const recentGamesContainer = document.getElementById('recent-games-container');
+            recentGamesContainer.innerHTML = ''; // Clear previous content
+
+            // Parse message and display recent games
+            const recentGames = JSON.parse(message);
+            const ul = document.createElement('ul');
+            recentGames.forEach(game => {
+                const li = document.createElement('li');
+                li.textContent = `Game ID: ${game.id}, Date: ${game.date}`;
+                ul.appendChild(li);
+            });
+            recentGamesContainer.appendChild(ul);
+        }
+
+        // Add event listener for WebSocket message event
+        socket.addEventListener('message', function(event) {
+            console.log('Received message from server:', event.data);
+            handleReceivedMessage(event.data);
+        });
+    </script>
+</body>
+</html>

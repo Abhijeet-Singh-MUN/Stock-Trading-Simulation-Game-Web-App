@@ -1,0 +1,23 @@
+<!-- create_game.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Create a New Game</h1>
+    <form id="create-game-form">
+        <label for="game-name">Game Name:</label>
+        <input type="text" id="game-name" name="game-name" required>
+        <label for="player-name">Your Name:</label>
+        <input type="text" id="player-name" name="player-name" required>
+        <button type="submit">Create Game</button>
+    </form>
+    <div id="create-game-message"></div>
+
+    <script type="module" src="create_game.js"></script>
+</body>
+</html>
