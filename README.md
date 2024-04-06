@@ -1,3 +1,43 @@
+## CS3100 term project part 3
+
+# Architecture Document
+
+## Overview
+This architecture document provides an overview of the implementation of the client-side application, including file structure, adherence to software design principles, usage of websockets, buttons, and user interactions. The client-side application is designed to interact with a server-side application to facilitate stock trading.
+
+## File Structure
+The client-side application follows a structured file organization:
+
+- **HTML Files:** Located in the public directory, representing different pages of the client-side application, such as `dashboard.html`, `login.html`, `register.html`, etc.
+- **JavaScript Files:** Corresponding JavaScript files are also stored in the public directory. Each HTML file has an associated JavaScript file responsible for handling client-side logic and interactions.
+- **CSS Files:** Stylesheets are stored in the public directory as well, under the `styles.css` file.
+
+## Modularity and Decoupling
+The client-side codebase emphasizes modularity and decoupling:
+
+- **Single Responsibility Principle (SRP):** Each module or function has a single responsibility, such as handling form submissions, managing WebSocket connections, etc.
+- **Open/Closed Principle (OCP):** The code is designed to be open for extension but closed for modification. New features can be added without modifying existing code.
+- **Liskov Substitution Principle (LSP):** Interfaces and abstractions are used where applicable to ensure that objects can be substituted with instances of their subtypes.
+- **Interface Segregation Principle (ISP):** Interfaces are tailored to specific use cases to minimize dependencies.
+
+## Usage of Websockets
+The client-side application utilizes websockets for real-time communication with the server:
+
+- Websockets are implemented using the native WebSocket API in JavaScript.
+- A WebSocket connection is established with the server, allowing bidirectional communication.
+- The client listens for incoming messages from the server and sends messages using the `sendMessage()` function defined in `websocket.js`.
+
+## Buttons and User Interactions
+Buttons are used to trigger various actions in the client-side application:
+
+- Buttons are used to submit forms (login, register, etc.), buy or sell stocks, create or join games, etc.
+- Event listeners are attached to these buttons to handle user interactions, ensuring that actions are performed in response to user input.
+
+## Conclusion
+The client-side application is designed to be modular, maintainable, and extensible. It adheres to software design principles such as SOLID and emphasizes decoupling and modularity to facilitate ease of development and maintenance. By utilizing websockets and buttons, it provides a seamless user experience for stock trading interactions.
+
+
+
 ## CS3100 term project part 2 
 
 # Project Name: Stock Trading Game
