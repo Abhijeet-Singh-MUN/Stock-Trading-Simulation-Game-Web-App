@@ -1,5 +1,7 @@
 ## CS3100 term project part 3
 
+## Part 2 (Server/ Backened) is followed by the images
+
 # Architecture Document
 
 ## Overview
