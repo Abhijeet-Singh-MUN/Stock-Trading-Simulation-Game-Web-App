@@ -36,7 +36,13 @@ Buttons are used to trigger various actions in the client-side application:
 ## Conclusion
 The client-side application is designed to be modular, maintainable, and extensible. It adheres to software design principles such as SOLID and emphasizes decoupling and modularity to facilitate ease of development and maintenance. By utilizing websockets and buttons, it provides a seamless user experience for stock trading interactions.
 
+## Some images
+![Log in](https://github.com/user-attachments/assets/39b8c98e-370e-482d-adea-c9c8c81adb75)
+![Home page 01](https://github.com/user-attachments/assets/597b9219-57fa-4839-ad2e-e99e6145722d)
+![Notifications 01](https://github.com/user-attachments/assets/76147019-d658-45b1-a12c-f5d06283c8ed)
 
+![Statements 01](https://github.com/user-attachments/assets/c3322111-8930-4116-a5f5-7a33c7480cf6)
+![Profile](https://github.com/user-attachments/assets/f49f72a3-21f6-4586-b707-52b50dde5fa0)
 
 
 ## CS3100 term project part 2 
